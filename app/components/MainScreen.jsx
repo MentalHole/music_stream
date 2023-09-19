@@ -42,7 +42,7 @@ const Main = () => {
       image: image3,
     },
     {
-      name: "Hamayusi",
+      name: "Humayusi",
       artist: "Imagine Dragons",
       image: image4,
     },
@@ -61,7 +61,7 @@ const Main = () => {
   return (
     <div className="text-white p-10 flex-1 ml-[16%]">
       <div
-        className="absolute lg:ml-[16%]  inset-0 -z-10 bg-contain bg-no-repeat lg:block hidden"
+        className="absolute lg:ml-[16%]  inset-0 -z-10 bg-contain bg-no-repeat lg:block hidden rounded-lg"
         style={{ backgroundImage: `url(${bg.src})` }}
       ></div>
 
@@ -115,7 +115,7 @@ const Main = () => {
             </h1>
           </div>
 
-          <div class="grid md:grid-cols-6 sm:grid-cols-6 grid-cols-2  gap-x-1">
+          <div class="grid md:grid-cols-6 sm:grid-cols-4 gap-x-1">
             {songsList.map((song, index) => (
               <a
                 key={index}
@@ -144,6 +144,72 @@ const Main = () => {
 
           <div>
             <SongGrid />
+          </div>
+          <div className="flex justify-between">
+            <h1 className="text-2xl font-semibold mt-2 mb-2">
+              Recently played
+            </h1>
+            <a href="#" className="hover:text-gray-400">Show All</a>
+          </div>
+
+          <div class="grid md:grid-cols-6 sm:grid-cols-6 grid-cols-2  gap-x-1">
+            {songsList.map((song, index) => (
+              <a
+                key={index}
+                aria-current="page"
+                className="bg-footer p-4 rounded hover:bg-active hover:bg-white hover:shadow-xl hover:text-black group active"
+                href="/"
+              >
+                <div className="pt-[100%] relative mb-4">
+                  <Image
+                    alt="cover"
+                    src={song.image}
+                    className="absolute inset-0 object-cover w-full h-full rounded shadow-xl"
+                  />
+                  <HeartButton />
+                  <PlayButton />
+                </div>
+                <h6 className="overflow-hidden overflow-ellipsis  whitespace-nowrap  text-base font-semibold">
+                  {song.name}
+                </h6>
+                <p className="line-clamp-2 text-link text-gray-400 text-sm mt-1">
+                  {song.artist}
+                </p>
+              </a>
+            ))}
+          </div>
+          <div className="flex justify-between">
+            <h1 className="text-2xl font-semibold mt-2 mb-2">
+              Popular Podcasts
+            </h1>
+            <a href="#" className="hover:text-gray-400">Show All</a>
+          </div>
+
+          <div class="grid md:grid-cols-6 sm:grid-cols-6 grid-cols-2 gap-x-1">
+            {songsList.slice(0).reverse().map((song, index) => (
+              <a
+                key={index}
+                aria-current="page"
+                className="bg-footer p-4 rounded hover:bg-active hover:bg-white hover:shadow-xl hover:text-black group active"
+                href="/"
+              >
+                <div className="pt-[100%] relative mb-4">
+                  <Image
+                    alt="cover"
+                    src={song.image}
+                    className="absolute inset-0 object-cover w-full h-full rounded shadow-xl"
+                  />
+                  <HeartButton />
+                  <PlayButton />
+                </div>
+                <h6 className="overflow-hidden overflow-ellipsis  whitespace-nowrap  text-base font-semibold">
+                  {song.name}
+                </h6>
+                <p className="line-clamp-2 text-link text-gray-400 text-sm mt-1">
+                  {song.artist}
+                </p>
+              </a>
+            ))}
           </div>
         </div>
       </div>

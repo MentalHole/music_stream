@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const SideMenu = () => {
 
     return (
-        <div className="flex flex-col fixed top-0 left-0 w-[16%] h-full ml-8 mt-8">
+        <div className="flex flex-col fixed top-0 left-0 w-[16%] h-full ml-10 mt-10">
             <div className="flex flex-col">
                 <h3 className="mb-6 font-bold">BROWSE</h3>
                 <ul className="flex flex-col space-y-3 font-semibold">
