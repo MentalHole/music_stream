@@ -15,20 +15,20 @@ const SongGrid = () => {
   const songsCol1 = [
     // Replace with your song data for Column 1
     {
-      name: "Worry About Us",
-      artist: "Rosie Lowe",
+      name: "Watch the world burn",
+      artist: "ZXCxCursed",
       icon: faPlay,
-      image: image1,
+      image: image2,
     },
     {
       name: "Take a Chance (feat. Little Dragon)",
       artist: "Else",
       icon: faPause,
-      image: image2,
+      image: image1,
     },
     {
       name: "Control",
-      artist: "Else",
+      artist: "Zaz",
       icon: faChartSimple,
       image: image3,
     },
@@ -38,20 +38,20 @@ const SongGrid = () => {
   const songsCol2 = [
     // Replace with your song data for Column 2
     {
-      name: "Lorde Tama",
-      artist: "Else",
+      name: "Hamayusi",
+      artist: "Imagine Dragons",
       icon: faChartSimple,
       image: image4,
     },
     {
-      name: "Take a Chance (feat. Little Dragon)",
-      artist: "Else",
+      name: "I'm blue da budy da buday",
+      artist: "Grandson",
       icon: faPlay,
       image: image5,
     },
     {
       name: "Control",
-      artist: "Rosie Lowe",
+      artist: "Benedict Cucumber",
       icon: faPlay,
       image: image6,
     },
