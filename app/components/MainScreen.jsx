@@ -185,7 +185,7 @@ const Main = () => {
             <a href="#" className="hover:text-gray-400">Show All</a>
           </div>
 
-          <div class="grid md:grid-cols-6 sm:grid-cols-6 grid-cols-2 gap-x-1">
+          <div class="grid md:grid-cols-6 sm:grid-cols-6 grid-cols-2 gap-x-1 pb-6">
             {songsList.slice(0).reverse().map((song, index) => (
               <a
                 key={index}
