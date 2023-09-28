@@ -24,10 +24,44 @@ import {
 } from "../assets/index";
 
 const Main = () => {
+  const songsList = [
+    // Replace with your song data for Column 1
+    {
+      name: "Watch the world burn",
+      artist: "ZXCxCursed",
+      image: image2,
+    },
+    {
+      name: "Take a Chance (feat. Little Dragon)",
+      artist: "Else",
+      image: image1,
+    },
+    {
+      name: "Control",
+      artist: "Zaz",
+      image: image3,
+    },
+    {
+      name: "Humayusi",
+      artist: "Imagine Dragons",
+      image: image4,
+    },
+    {
+      name: "I'm blue da budy da buday",
+      artist: "Grandson",
+      image: image5,
+    },
+    {
+      name: "Control",
+      artist: "Benedict Cucumber",
+      image: image6,
+    },
+  ];
+
   return (
     <div className="text-white p-10 flex-1 ml-[16%]">
       <div
-        className="absolute lg:ml-[16%]  inset-0 -z-10 bg-contain bg-no-repeat lg:block hidden"
+        className="absolute lg:ml-[16%]  inset-0 -z-10 bg-contain bg-no-repeat lg:block hidden rounded-lg"
         style={{ backgroundImage: `url(${bg.src})` }}
       ></div>
 
@@ -70,171 +104,112 @@ const Main = () => {
               Listen
               <FontAwesomeIcon
                 icon={faPlayCircle}
-                className="absolute top-1/2 transform -translate-y-1/2 w-12 h-12 p-2"
+                className="absolute top-1/2 mr-2 transform -translate-y-1/2 w-12 h-12 p-2"
               />
             </button>
-            <div className="w-12 h-12 bg-customBlue-1 rounded-full flex items-center justify-center shadow-xl">
-              <FontAwesomeIcon
-                icon={faBookmark}
-                className="text-white w-6 h-6"
-              />
-            </div>
           </div>
 
           <div>
             <h1 className="text-2xl font-semibold mt-20 mb-2">
-              Noteworthy Albums
+              Top Album
             </h1>
-            <p className="text-sm font-medium text-gray-400 mb-6">
-              Get better recommendations
-              <span class="text-blue-500 underline ml-2">
-                defining your taste
-              </span>
-            </p>
           </div>
 
-          <div class="grid md:grid-cols-6 sm:grid-cols-6 grid-cols-2  gap-x-1">
-            <a
-              aria-current="page"
-              className="bg-footer p-4 rounded hover:bg-active hover:bg-white hover:shadow-xl hover:text-black hover:text-black group active"
-              href="/"
-            >
-              <div className="pt-[100%] relative mb-4">
-                <Image
-                  alt="cover"
-                  src={image1}
-                  className="absolute inset-0 object-cover w-full h-full rounded shadow-xl"
-                />
-                <HeartButton />
-                <PlayButton />
-              </div>
-              <h6 className="overflow-hidden overflow-ellipsis  whitespace-nowrap  text-base font-semibold">
-                Remixes
-              </h6>
-              <p className="line-clamp-2 text-link text-gray-400 text-sm mt-1">
-                Flume
-              </p>
-            </a>
-
-            <a
-              aria-current="page"
-              className="bg-footer p-4 rounded hover:bg-active hover:bg-white hover:shadow-xl hover:text-black group active"
-              href="/"
-            >
-              <div className="pt-[100%] relative mb-4">
-                <Image
-                  width={100}
-                  height={100}
-                  src={image2}
-                  className="absolute inset-0 object-cover w-full h-full rounded shadow-xl"
-                />
-                <HeartButton />
-                <PlayButton />
-              </div>
-              <h6 className="overflow-hidden overflow-ellipsis  whitespace-nowrap  text-base font-semibold">
-                Ace
-              </h6>
-              <p className="line-clamp-2 text-link text-gray-400 text-sm mt-1">
-                Else
-              </p>
-            </a>
-
-            <a
-              aria-current="page"
-              className="bg-footer z-10 p-4 rounded hover:bg-active hover:bg-white hover:shadow-xl hover:text-black group active"
-              href="/"
-            >
-              <div className="pt-[100%] relative mb-4">
-                <Image
-                  width={100}
-                  height={100}
-                  src={image3}
-                  className="absolute inset-0 object-cover w-full h-full rounded shadow-xl"
-                />
-                <HeartButton />
-                <PlayButton />
-              </div>
-              <h6 className="overflow-hidden overflow-ellipsis  whitespace-nowrap  text-base font-semibold">
-                How'd You Like It
-              </h6>
-              <p className="line-clamp-2 text-link text-gray-400 text-sm mt-1">
-                Rosie Lowe
-              </p>
-            </a>
-
-            <a
-              aria-current="page"
-              className="bg-footer z-10 p-4 rounded hover:bg-active hover:bg-white hover:shadow-xl hover:text-black group active"
-              href="/"
-            >
-              <div className="pt-[100%] relative mb-4">
-                <Image
-                  width={100}
-                  height={100}
-                  src={image4}
-                  className="absolute inset-0 object-cover w-full h-full rounded shadow-xl"
-                />
-                <HeartButton />
-                <PlayButton />
-              </div>
-              <h6 className="overflow-hidden overflow-ellipsis  whitespace-nowrap  text-base font-semibold">
-                Take a Chance
-              </h6>
-              <p className="line-clamp-2 text-link text-gray-400 text-sm mt-1">
-                Else
-              </p>
-            </a>
-
-            <a
-              aria-current="page"
-              className="bg-footer z-10 p-4 rounded hover:bg-active hover:bg-white hover:shadow-xl hover:text-black group active"
-              href="/"
-            >
-              <div className="pt-[100%] relative mb-4">
-                <Image
-                  width={100}
-                  height={100}
-                  src={image5}
-                  className="absolute inset-0 object-cover w-full h-full rounded shadow-xl"
-                />
-                <HeartButton />
-                <PlayButton />
-              </div>
-              <h6 className="overflow-hidden overflow-ellipsis  whitespace-nowrap  text-base font-semibold">
-                Skin: The Remixes
-              </h6>
-              <p className="line-clamp-2 text-link text-gray-400 text-sm mt-1">
-                Flume
-              </p>
-            </a>
-
-            <a
-              aria-current="page"
-              className="bg-footer z-10 p-4 rounded hover:bg-active hover:bg-white hover:shadow-xl hover:text-black group active"
-              href="/"
-            >
-              <div className="pt-[100%] relative mb-4">
-                <Image
-                  width={100}
-                  height={100}
-                  src={image6}
-                  className="absolute inset-0 object-cover w-full h-full rounded shadow-xl"
-                />
-                <HeartButton />
-                <PlayButton />
-              </div>
-              <h6 className="overflow-hidden overflow-ellipsis  whitespace-nowrap  text-base font-semibold">
-                1978
-              </h6>
-              <p className="line-clamp-2 text-link text-gray-400 text-sm mt-1">
-                Else , Lorde
-              </p>
-            </a>
+          <div class="grid md:grid-cols-6 sm:grid-cols-4 gap-x-1">
+            {songsList.map((song, index) => (
+              <a
+                key={index}
+                aria-current="page"
+                className="bg-footer p-4 rounded hover:bg-active hover:bg-white hover:shadow-xl hover:text-black group active"
+                href="/"
+              >
+                <div className="pt-[100%] relative mb-4">
+                  <Image
+                    alt="cover"
+                    src={song.image}
+                    className="absolute inset-0 object-cover w-full h-full rounded shadow-xl"
+                  />
+                  <HeartButton />
+                  <PlayButton />
+                </div>
+                <h6 className="overflow-hidden overflow-ellipsis  whitespace-nowrap  text-base font-semibold">
+                  {song.name}
+                </h6>
+                <p className="line-clamp-2 text-link text-gray-400 text-sm mt-1">
+                  {song.artist}
+                </p>
+              </a>
+            ))}
           </div>
 
           <div>
             <SongGrid />
-            <Player />
+          </div>
+          <div className="flex justify-between">
+            <h1 className="text-2xl font-semibold mt-2 mb-2">
+              Recently played
+            </h1>
+            <a href="#" className="hover:text-gray-400">Show All</a>
+          </div>
+
+          <div class="grid md:grid-cols-6 sm:grid-cols-6 grid-cols-2  gap-x-1">
+            {songsList.map((song, index) => (
+              <a
+                key={index}
+                aria-current="page"
+                className="bg-footer p-4 rounded hover:bg-active hover:bg-white hover:shadow-xl hover:text-black group active"
+                href="/"
+              >
+                <div className="pt-[100%] relative mb-4">
+                  <Image
+                    alt="cover"
+                    src={song.image}
+                    className="absolute inset-0 object-cover w-full h-full rounded shadow-xl"
+                  />
+                  <HeartButton />
+                  <PlayButton />
+                </div>
+                <h6 className="overflow-hidden overflow-ellipsis  whitespace-nowrap  text-base font-semibold">
+                  {song.name}
+                </h6>
+                <p className="line-clamp-2 text-link text-gray-400 text-sm mt-1">
+                  {song.artist}
+                </p>
+              </a>
+            ))}
+          </div>
+          <div className="flex justify-between">
+            <h1 className="text-2xl font-semibold mt-2 mb-2">
+              Popular Podcasts
+            </h1>
+            <a href="#" className="hover:text-gray-400">Show All</a>
+          </div>
+
+          <div class="grid md:grid-cols-6 sm:grid-cols-6 grid-cols-2 gap-x-1 pb-6">
+            {songsList.slice(0).reverse().map((song, index) => (
+              <a
+                key={index}
+                aria-current="page"
+                className="bg-footer p-4 rounded hover:bg-active hover:bg-white hover:shadow-xl hover:text-black group active"
+                href="/"
+              >
+                <div className="pt-[100%] relative mb-4">
+                  <Image
+                    alt="cover"
+                    src={song.image}
+                    className="absolute inset-0 object-cover w-full h-full rounded shadow-xl"
+                  />
+                  <HeartButton />
+                  <PlayButton />
+                </div>
+                <h6 className="overflow-hidden overflow-ellipsis  whitespace-nowrap  text-base font-semibold">
+                  {song.name}
+                </h6>
+                <p className="line-clamp-2 text-link text-gray-400 text-sm mt-1">
+                  {song.artist}
+                </p>
+              </a>
+            ))}
           </div>
         </div>
       </div>
