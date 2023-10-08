@@ -19,7 +19,7 @@ const SideMenu = () => {
                         </Link>
                     </li>
                     <li className="hover:scale-90  transition-transform">
-                        <Link href="#" className="flex flex-row items-center space-x-2">
+                        <Link href="/genres" className="flex flex-row items-center space-x-2">
                             <FontAwesomeIcon
                                 icon={faMusic}
                                 className="w-6"
@@ -28,7 +28,7 @@ const SideMenu = () => {
                         </Link>
                     </li>
                     <li className="hover:scale-90  transition-transform">
-                        <Link href="#" className="flex flex-row items-center space-x-2">
+                        <Link href="/chart" className="flex flex-row items-center space-x-2">
                             <FontAwesomeIcon
                                 icon={faHeadphones}
                                 className="w-6"
@@ -37,7 +37,7 @@ const SideMenu = () => {
                         </Link>
                     </li>
                     <li className="hover:scale-90  transition-transform">
-                        <Link href="#" className="flex flex-row items-center space-x-2">
+                        <Link href="/podcasts" className="flex flex-row items-center space-x-2">
                             <FontAwesomeIcon
                                 icon={faMicrophone}
                                 className="w-6"
@@ -52,7 +52,7 @@ const SideMenu = () => {
                 <h3 className="mt-16 mb-6 font-bold">LIBRARY</h3>
                 <ul className="flex flex-col space-y-3 font-semibold">
                     <li className="hover:scale-90  transition-transform">
-                        <Link href="#" className="flex flex-row items-center space-x-2">
+                        <Link href="/favourites" className="flex flex-row items-center space-x-2">
                             <FontAwesomeIcon
                                 icon={faStar}
                                 className="w-6"
@@ -61,7 +61,7 @@ const SideMenu = () => {
                         </Link>
                     </li>
                     <li className="hover:scale-90  transition-transform">
-                        <Link href="#" className="flex flex-row items-center space-x-2">
+                        <Link href="/playlist" className="flex flex-row items-center space-x-2">
                             <FontAwesomeIcon
                                 icon={faCompass}
                                 className="w-6"
