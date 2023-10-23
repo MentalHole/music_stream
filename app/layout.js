@@ -1,7 +1,8 @@
+import SideMenu from '../components/SideMenu'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Figtree } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Figtree({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Music Streaming Service',
@@ -9,9 +10,14 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>
+        <SideMenu />
+        {children}
+      </body>
     </html>
   )
 }

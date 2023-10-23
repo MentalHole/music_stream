@@ -8,7 +8,7 @@ import {
   faChartSimple,
   faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
-import { image1, image2, image3, image4, image5, image6,  bg} from "../assets/index";
+import { image1, image2, image3, image4, image5, image6,  bg} from "../app/assets/index";
 import Image from "next/image";
 
 const SongGrid = () => {
