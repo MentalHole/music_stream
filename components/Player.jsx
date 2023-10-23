@@ -1,19 +1,24 @@
-import React from 'react';
+'use client'
+import {React, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBackward, faPause, faForward, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
-import {image1} from '../assets/index'
+import {image1} from '../app/assets/index'
 
 const Player = () => {
-  const isPlaying = true; 
+  const [isPlaying, setIsPlaying] = useState(false)
   const currentTime = "2:10"; 
   const totalTime = "03:56"; 
-  const progress = 30; 
+  const progress = 40;
+
+  function togglePlayPause() {
+    setIsPlaying(prev => !prev)
+  }
 
   return (
-    <div className="fixed b-0 bottom-0 w-full">
-      <div className="flex items-center space-x-4 flex-grow pb-2 px-12" style={{background: '#1b1a1a;'}}>
-        <div className="flex flex-row">
+    <div className="fixed b-0 bottom-0 w-full bg-dark">
+      <div className="flex items-center space-x-4 flex-grow pb-2 px-12" >
+        <div className="flex flex-row color-white">
           <Image width={100} height={100} src={image1} alt="song image" className="mr-4 w-10 h-10" />
           <div className="flex flex-col">
             <span className="text-sm mr-2 font-bold lg:block hidden">Take a Chance (feat. Little Dragon)</span>
@@ -23,8 +28,8 @@ const Player = () => {
         <div className="flex flex-row justify-center w-full">
           <p className="text-gray-400 mr-2">{currentTime}</p>
           {/* Custom Progress Bar */}
-          <div className="w-[30%] bg-gray-700 bg-customBlue rounded-md h-1 cursor-pointer">
-            <div className="bg-white rounded-md h-full" style={{ width: `${progress}%` }}></div>
+          <div className="w-[30%] bg-[white] rounded-md h-1 cursor-pointer">
+            <div className="bg-[aqua] rounded-md h-full" style={{ width: `${progress}%` }}></div>
           </div>
           <p className="text-gray-400 ml-2 mr-2">{totalTime}</p>
         </div>
@@ -34,7 +39,9 @@ const Player = () => {
             <FontAwesomeIcon icon={faBackward} className='w-4'/>
           </button>
           {/* Play/Pause Button */}
-          <button className="mr-4 w-10 h-10 text-customBlue-1 hover:text-white">
+          <button 
+            onClick={togglePlayPause}
+            className="mr-4 w-10 h-10 text-customBlue-1 hover:text-white">
             {isPlaying ? (
               <FontAwesomeIcon icon={faPlayCircle} />
             ) : (
